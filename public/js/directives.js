@@ -5,8 +5,8 @@
 *
 */
 
-var excelAnalyserDirectives = angular.module('excelAnalyserDirectives', []);
-excelAnalyserDirectives.directive('targetSelect', function() {
+var mcareDirectives = angular.module('mcareDirectives', []);
+mcareDirectives.directive('targetSelect', function() {
     var controller = ['$scope',function ($scope) {
         function init() {
             $scope.items = angular.copy($scope.datasource);

@@ -2,7 +2,7 @@
 
 /* Filters */
 
-var excelAnalyserFilters = angular.module('excelAnalyserFilters', [])
+var mcareFilters = angular.module('mcareFilters', [])
     .filter('replaceSemiColonWithComma',function() {
         return function(textToReplace) {
             var replacedText = textToReplace.replace(/\;/g,', ');

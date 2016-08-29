@@ -7,4 +7,4 @@
 *
 */
 
-var excelAnalyserServices = angular.module('excelAnalyserServices', []);
+var mcareServices = angular.module('mcareServices', []);
