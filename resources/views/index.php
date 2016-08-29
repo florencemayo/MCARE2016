@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mcare">
 <head>
     <meta charset="utf-8">
     <title>Avenxo Admin Theme</title>
@@ -12,12 +12,16 @@
 
     <link type='text/css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600' rel='stylesheet'>
 
-    <link type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">        <!-- Font Awesome -->
-    <link type="text/css" href="assets/fonts/themify-icons/themify-icons.css" rel="stylesheet">              <!-- Themify Icons -->
-    <link type="text/css" href="assets/css/styles.css" rel="stylesheet">                                     <!-- Core CSS with all styles -->
-
-    <link type="text/css" href="assets/plugins/codeprettifier/prettify.css" rel="stylesheet">                <!-- Code Prettifier -->
-    <link type="text/css" href="assets/plugins/iCheck/skins/minimal/blue.css" rel="stylesheet">              <!-- iCheck -->
+    <link type="text/css" href="<?php echo asset('assets/fonts/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">        
+    <!-- Font Awesome -->
+    <link type="text/css" href="<?php echo asset('assets/fonts/themify-icons/themify-icons.css') ?>" rel="stylesheet">              
+    <!-- Themify Icons -->
+    <link type="text/css" href="<?php echo asset('assets/css/styles.css') ?>" rel="stylesheet">                                     
+    <!-- Core CSS with all styles -->
+    <link type="text/css" href="<?php echo asset('assets/plugins/codeprettifier/prettify.css') ?>" rel="stylesheet">                
+   <!-- Code Prettifier -->
+    <link type="text/css" href="<?php echo asset('assets/plugins/iCheck/skins/minimal/blue.css') ?>" rel="stylesheet">              
+    <!-- iCheck -->
 
     <!--[if lt IE 10]>
         <script type="text/javascript" src="assets/js/media.match.min.js"></script>
@@ -26,11 +30,13 @@
     <![endif]-->
     <!-- The following CSS are included as plugins and can be removed if unused-->
     
-<link type="text/css" href="assets/plugins/fullcalendar/fullcalendar.css" rel="stylesheet"> 						<!-- FullCalendar -->
-<link type="text/css" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"> 			<!-- jVectorMap -->
-<link type="text/css" href="assets/plugins/switchery/switchery.css" rel="stylesheet">   							<!-- Switchery -->
-
-    </head>
+<link type="text/css" href="<?php echo asset('assets/plugins/fullcalendar/fullcalendar.css') ?>" rel="stylesheet"> 						
+<!-- FullCalendar -->
+<link type="text/css" href="<?php echo asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css') ?>" rel="stylesheet"> 			
+<!-- jVectorMap -->
+<link type="text/css" href="<?php echo asset('assets/plugins/switchery/switchery.css') ?>" rel="stylesheet">   							
+<!-- Switchery -->
+</head>
 
     <body class="animated-content">
         
@@ -1075,61 +1081,112 @@
 
 
     </div>
-<!-- /Switcher -->
-    <!-- Load site level scripts -->
+
+    
+    
+<!-- Load site level scripts -->
 
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script> -->
 
-<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
-<script type="text/javascript" src="assets/js/jqueryui-1.10.3.min.js"></script> 							<!-- Load jQueryUI -->
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 								<!-- Load Bootstrap -->
-<script type="text/javascript" src="assets/js/enquire.min.js"></script> 									<!-- Load Enquire -->
+<script type="text/javascript" src="<?php echo asset('assets/js/jquery-1.10.2.min.js') ?>"></script> 	
 
-<script type="text/javascript" src="assets/plugins/velocityjs/velocity.min.js"></script>					<!-- Load Velocity for Animated Content -->
-<script type="text/javascript" src="assets/plugins/velocityjs/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="assets/plugins/wijets/wijets.js"></script>     						<!-- Wijet -->
-
-<script type="text/javascript" src="assets/plugins/codeprettifier/prettify.js"></script> 				<!-- Code Prettifier  -->
-<script type="text/javascript" src="assets/plugins/bootstrap-switch/bootstrap-switch.js"></script> 		<!-- Swith/Toggle Button -->
-
-<script type="text/javascript" src="assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js"></script>  <!-- Bootstrap Tabdrop -->
-
-<script type="text/javascript" src="assets/plugins/iCheck/icheck.min.js"></script>     					<!-- iCheck -->
-
-<script type="text/javascript" src="assets/plugins/nanoScroller/js/jquery.nanoscroller.min.js"></script> <!-- nano scroller -->
-
-<script type="text/javascript" src="assets/js/application.js"></script>
-<script type="text/javascript" src="assets/demo/demo.js"></script>
-<script type="text/javascript" src="assets/demo/demo-switcher.js"></script>
+<!-- Load jQuery -->
+<script type="text/javascript" src="<?php echo asset('assets/js/jqueryui-1.10.3.min.js') ?>"></script> 		
+<!-- Load jQueryUI -->
+<script type="text/javascript" src="<?php echo asset('assets/js/bootstrap.min.js') ?>"></script> 			
+<!-- Load Bootstrap -->
+<script type="text/javascript" src="<?php echo asset('assets/js/enquire.min.js') ?>"></script> 				
+<!-- Load Enquire -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/velocityjs/velocity.min.js') ?>"></script>					
+<!-- Load Velocity for Animated Content -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/velocityjs/velocity.ui.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo asset('assets/plugins/wijets/wijets.js') ?>"></script>     	<!-- Wijet -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/codeprettifier/prettify.js') ?>"></script> 				
+<!-- Code Prettifier  -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/bootstrap-switch/bootstrap-switch.js') ?>"></script> 		
+<!-- Swith/Toggle Button -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js') ?>"></script>  
+<!-- Bootstrap Tabdrop -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/iCheck/icheck.min.js') ?>"></script><!-- iCheck -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/nanoScroller/js/jquery.nanoscroller.min.js') ?>"></script> 
+<!-- nano scroller -->
+<script type="text/javascript" src="<?php echo asset('assets/js/application.js') ?>"></script>
+<script type="text/javascript" src="<?php echo asset('assets/demo/demo.js') ?>"></script>
+<script type="text/javascript" src="<?php echo asset('assets/demo/demo-switcher.js') ?>"></script>
 
 <!-- End loading site level scripts -->
     
     <!-- Load page level scripts-->
     
 <!-- Charts -->
-<script type="text/javascript" src="assets/plugins/charts-flot/jquery.flot.min.js"></script>             	<!-- Flot Main File -->
-<script type="text/javascript" src="assets/plugins/charts-flot/jquery.flot.pie.min.js"></script>             <!-- Flot Pie Chart Plugin -->
-<script type="text/javascript" src="assets/plugins/charts-flot/jquery.flot.stack.min.js"></script>       	<!-- Flot Stacked Charts Plugin -->
-<script type="text/javascript" src="assets/plugins/charts-flot/jquery.flot.orderBars.min.js"></script>   	<!-- Flot Ordered Bars Plugin-->
-<script type="text/javascript" src="assets/plugins/charts-flot/jquery.flot.resize.min.js"></script>          <!-- Flot Responsive -->
-<script type="text/javascript" src="assets/plugins/charts-flot/jquery.flot.tooltip.min.js"></script> 		<!-- Flot Tooltips -->
-<script type="text/javascript" src="assets/plugins/charts-flot/jquery.flot.spline.js"></script> 				<!-- Flot Curved Lines -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.min.js') ?>"></script>             	
+<!-- Flot Main File -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.pie.min.js') ?>"></script>             
+<!-- Flot Pie Chart Plugin -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.stack.min.js') ?>"></script>       	
+<!-- Flot Stacked Charts Plugin -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.orderBars.min.js') ?>"></script>   	
+<!-- Flot Ordered Bars Plugin-->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.resize.min.js') ?>"></script>          
+<!-- Flot Responsive -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.tooltip.min.js') ?>"></script> 		
+<!-- Flot Tooltips -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.spline.js') ?>"></script> 				
+<!-- Flot Curved Lines -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/sparklines/jquery.sparklines.min.js') ?>"></script> 			 
+<!-- Sparkline -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js') ?>"></script>       
+<!-- jVectorMap -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') ?>"></script>   
+<!-- jVectorMap -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/switchery/switchery.js') ?>"></script> <!-- Switchery -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/easypiechart/jquery.easypiechart.js') ?>"></script>
+<script type="text/javascript" src="<?php echo asset('assets/plugins/fullcalendar/moment.min.js') ?>"></script> 		 			
+<!-- Moment.js Dependency -->
+<script type="text/javascript" src="<?php echo asset('assets/plugins/fullcalendar/fullcalendar.min.js') ?>"></script>   			<!-- Calendar Plugin -->
 
-<script type="text/javascript" src="assets/plugins/sparklines/jquery.sparklines.min.js"></script> 			 <!-- Sparkline -->
+<script type="text/javascript" src="<?php echo asset('assets/demo/demo-index.js') ?>"></script> 			
 
-<script type="text/javascript" src="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>       <!-- jVectorMap -->
-<script type="text/javascript" src="assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>   <!-- jVectorMap -->
+<!-- Initialize scripts for this page-->
+<script type="text/javascript" src="<?php echo  asset('js/angular.js') ?>"></script>
+<script type="text/javascript" src="<?php echo  asset('js/angular-resource.js') ?>"></script>
+<script type="text/javascript" src="<?php echo  asset('js/angular-route.js') ?>"></script>
+<script type="text/javascript" src="<?php echo  asset('js/angular-sanitize.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo  asset('js/angular-animate.min.js') ?>"></script>
 
-<script type="text/javascript" src="assets/plugins/switchery/switchery.js"></script>     					<!-- Switchery -->
-<script type="text/javascript" src="assets/plugins/easypiechart/jquery.easypiechart.js"></script>
-<script type="text/javascript" src="assets/plugins/fullcalendar/moment.min.js"></script> 		 			<!-- Moment.js Dependency -->
-<script type="text/javascript" src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>   			<!-- Calendar Plugin -->
+<script src="<?php echo  asset("libs/tree/angular-multi-select-tree-0.1.0.min.js") ?>"></script>
+<script src="<?php echo  asset("libs/tree/angular-multi-select-tree-0.1.0.tpl.js") ?>"></script>
+<script src="<?php echo  asset("libs/angular-bootstrap-multiselect/angular-bootstrap-multiselect.js") ?>"></script>
+<script src="<?php echo  asset("libs/spinkit/angular-spinkit.min.js") ?>"></script>
+<script src="<?php echo  asset("libs/ng-csv/ng-csv.js") ?>"></script>
+<script src="<?php echo  asset("libs/moment/moment.min.js") ?>"></script>
 
-<script type="text/javascript" src="assets/demo/demo-index.js"></script> 									<!-- Initialize scripts for this page-->
+<script type="text/javascript" src="<?php echo  asset("js/app.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("js/services.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("js/directives.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("js/controllers.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("js/filters.js") ?>"></script>
 
-    <!-- End loading page level scripts-->
+<!--controllers-->
+<script type="text/javascript" src="<?php echo  asset("controllers/mainController.js") ?>"></script>
+
+<script src="<?php echo  asset("libs/pagination/dirPagination.js") ?>"></script>
+
+<script src="<?php echo  asset("libs/angular-strap/angular-strap.js") ?>" data-semver="v2.3.7"></script>
+<script src="<?php echo  asset("libs/angular-strap/angular-strap.tpl.js") ?>" data-semver="v2.3.7"></script>
+<script src="<?php echo  asset("libs/angular-strap/angular-strap.docs.tpl.js") ?>" data-semver="v2.3.7"></script>
+
+
+<script type="text/javascript" src="<?php echo  asset("libs/Highcharts/js/highcharts.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("libs/Highcharts/js/modules/exporting.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("libs/Highcharts/js/highcharts-more.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("libs/Highcharts/js/modules/solid-gauge.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("libs/Highcharts/js/modules/data.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("libs/highcharts-ng/dist/highcharts-ng.min.js") ?>"></script>
+
+
+<!-- End loading page level scripts-->
 
     </body>
 </html>

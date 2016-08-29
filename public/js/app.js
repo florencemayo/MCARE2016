@@ -1,10 +1,10 @@
-angular.module("excelAnalyser",[
+angular.module("mcare",[
         'ngRoute',
         'ngSanitize',
-        'excelAnalyserDirectives',
-        'excelAnalyserControllers',
-        'excelAnalyserServices',
-        'excelAnalyserFilters',
+        'mcareDirectives',
+        'mcareControllers',
+        'mcareServices',
+        'mcareFilters',
         'mgcrea.ngStrap',
         'ngAnimate',
         'angular-spinkit',
@@ -22,30 +22,6 @@ angular.module("excelAnalyser",[
     .config( function($routeProvider){
         $routeProvider.when("/reports",{
             templateUrl: 'views/reports.html',
-            controller: 'mainController'
-        }).when("/region",{
-              templateUrl: 'views/region.html',
-              controller: 'regionController'
-        }).when("/district",{
-            templateUrl: 'views/district.html',
-            controller: 'districtController'
-        }).when("/categories",{
-            templateUrl: 'views/categories.html',
-            controller: 'categoriesController'
-        }).when("/metadata",{
-            templateUrl: 'views/metadata.html',
-            controller: 'metadataController'
-        }).when("/program_data",{
-            templateUrl: 'views/program_data.html',
-            controller: 'mainController'
-        }).when("/upload",{
-            templateUrl: 'views/upload.html',
-            controller: 'mainController'
-        }).when("/users",{
-            templateUrl: 'views/users.html',
-            controller: 'mainController'
-        }).when("/cats",{
-            templateUrl: 'views/categories.html',
             controller: 'mainController'
         });
 
