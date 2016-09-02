@@ -23,5 +23,4 @@ class Newborns extends Model
     {
         return $this->belongsTo('Patients');
     }
-
 }
