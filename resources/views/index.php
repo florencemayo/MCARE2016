@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="mcare">
+<html lang="en" ng-app="mcare" class="ng-scope">
 <head>
     <meta charset="utf-8">
     <title>MCARE</title>
@@ -291,7 +291,8 @@
 			<li class="nav-separator"><span>Explore</span></li>
 			<li><a href="index.html"><i class="ti ti-home"></i><span>Dashboard</span><span class="badge badge-teal">2</span></a></li>
 			<li><a href="angular/app/index.html"><i class="ti ti-shield"></i><span>AngularJS</span></span></a></li>
-      <li><a href="./#registerUser"><i class="ti ti-shield"></i><span>Registration</span></span></a></li>
+      <li><a href="./#register"><i class="ti ti-shield"></i><span>Registration</span></span></a></li>
+      <li><a href="./#patient"><i class="ti ti-shield"></i><span>Patient</span></span></a></li>
 			<li><a href="javascript:;"><i class="ti ti-layout"></i><span>Layout</span></a>
 				<ul class="acc-menu">
 					<li><a href="layout-grids.html">Grid Scaffolding</a></li>
@@ -415,10 +416,7 @@
 <li class="active"><a href="index.html">Dashboard</a></li>
 
                             </ol>
-                          <div class="container-fluid">
-                            </div> <!-- .container-fluid -->
-
-                              <div ng-view></div>
+                                  <div ng-view class="ng-scope"></div>
                         </div> <!-- #page-content -->
 
                     </div>

@@ -20,9 +20,12 @@ angular.module("mcare",[
         });
     })
     .config( function($routeProvider){
-        $routeProvider.when("/registerUser",{
+        $routeProvider.when("/register",{
             templateUrl: 'views/registerUser.html',
             controller: 'registerUserController'
+        }).when("/patient",{
+            templateUrl: 'views/patient.html',
+            controller: 'mainController'
         });
 
         $routeProvider.otherwise({
