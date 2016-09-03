@@ -9,8 +9,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Clinics extends Model
-{
+class Clinics extends Model{
     protected $table = 'clinics';
 
     protected $primaryKey = 'id';
