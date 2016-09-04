@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateServicesTable extends Migration
+class PatientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,13 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('patients', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nextOfKin');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
-            $table->string('name');
-            $table->integer('price');
-            $table->integer('bill_id')->unsigned();
-            $table->foreign('bill_id')->references('id')->on('bills');
+
         });
     }
 
@@ -29,6 +29,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('services');
+        Schema::drop('patients');
     }
 }

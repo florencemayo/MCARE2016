@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClinicsTable extends Migration
+class RoomsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,12 @@ class CreateClinicsTable extends Migration
      */
     public function up()
     {
-        Schema::create('clinics', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('name');
+            $table->string('room_name');
+            $table->integer('room_number');
             $table->integer('floor_number');
-            $table->integer('department_id')->unsigned();
-            $table->foreign('department_id')->references('id')->on('departments');
         });
     }
 
@@ -29,6 +28,6 @@ class CreateClinicsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('clinics');
+        Schema::drop('rooms');
     }
 }
