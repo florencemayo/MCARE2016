@@ -88,3 +88,13 @@ Route::get('services/{id}', 'ServicesController@show');
 Route::post('services', 'ServicesController@store');
 Route::post('services/{id}', 'ServicesController@update');
 Route::post('services/delete/{id}', 'ServicesController@destroy');
+
+/**
+ * Bookings routes
+ *
+ */
+Route::get('bookings', 'BookingsController@index');
+Route::get('bookings/{id}', 'BookingsController@show');
+Route::post('bookings', 'BookingsController@store');
+Route::post('bookings/{id}', 'BookingsController@update');
+Route::post('bookings/delete/{id}', 'BookingsController@destroy');
