@@ -26,7 +26,7 @@ class UsersTable extends Migration
             $table->string('district_name');
             $table->string('region_name');
             $table->string('country_name');
-                        //$table->string('address_code')->unsigned();
+            //$table->string('address_code')->unsigned();
             $table->string('user_name')->unique();
             $table->string('email')->unique();
             $table->string('password');

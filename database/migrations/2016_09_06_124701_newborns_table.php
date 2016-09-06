@@ -13,7 +13,7 @@ class NewbornsTable extends Migration
     public function up()
     {
         Schema::create('newborns', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id');         
             $table->string('identification_code');
             $table->date('date_birth');
             $table->integer('patient_id')->unsigned();
