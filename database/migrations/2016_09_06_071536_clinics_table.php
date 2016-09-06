@@ -15,6 +15,7 @@ class ClinicsTable extends Migration
         Schema::create('clinics', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('clinic_name');
+            $table->integer('floor_number');
             $table->integer('department_id')->unsigned();
             $table->foreign('department_id')->references('id')->on('departments');
             $table->timestamps();
@@ -28,6 +29,6 @@ class ClinicsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('clinics');
+        Schema::drop('clinic');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PatientsTable extends Migration
+class RoomsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,12 @@ class PatientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('patients', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nextOfKin');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('room_name');
+            $table->integer('room_number');
+            $table->integer('floor_number');
             $table->timestamps();
-
         });
     }
 
@@ -29,6 +28,6 @@ class PatientsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('patients');
+        Schema::drop('rooms');
     }
 }

@@ -22,15 +22,16 @@ class UsersTable extends Migration
             $table->string('gender');
             $table->date('date_birth');
             $table->string('mobile_number');
-            $table->string('postal_code');
             $table->string('street_name');
             $table->string('district_name');
             $table->string('region_name');
             $table->string('country_name');
+                        //$table->string('address_code')->unsigned();
             $table->string('user_name')->unique();
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
+            //$table->foreign('address_code')->references('id')->on('address');
             $table->timestamps();
         });
     }
