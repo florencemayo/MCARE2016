@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BedTable extends Migration
+class BedsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,15 @@ class BedTable extends Migration
      */
     public function up()
     {
-        Schema::create('bed', function (Blueprint $table) {
+        Schema::create('beds', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('bed_size');
             $table->string('bed_type');
             $table->string('bed_class');
             $table->integer('bed_charge');
+            $table->integer('ward_id')->unsigned();
             $table->integer('clinic_id')->unsigned();
             $table->integer('department_id')->unsigned();
-            $table->integer('ward_id')->unsigned();
             $table->foreign('clinic_id')->references('id')->on('clinics');
             $table->foreign('department_id')->references('id')->on('departments');
             $table->foreign('ward_id')->references('id')->on('ward');
@@ -35,6 +35,6 @@ class BedTable extends Migration
      */
     public function down()
     {
-        Schema::drop('bed');
+        Schema::drop('beds');
     }
 }

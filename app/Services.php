@@ -16,7 +16,7 @@ class Services extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['id', 'name', 'price', 'bill_id'];
+    protected $fillable = ['service_name', 'price', 'bill_id'];
 
     protected $hidden = ['id'];
 

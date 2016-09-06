@@ -16,7 +16,7 @@ class Rooms extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['id', 'name', 'number', 'floor_number'];
+    protected $fillable = ['room_name', 'number', 'floor_number'];
 
     protected $hidden = ['id'];
 

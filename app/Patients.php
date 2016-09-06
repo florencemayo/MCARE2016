@@ -15,7 +15,7 @@ class Patients extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['id'];
+    protected $fillable = ['user_id','next_of_kin'];
 
     protected $hidden = ['id'];
 
@@ -45,5 +45,13 @@ class Patients extends Model{
 
     public function department(){
         return $this->HasMany('Department');
+    }
+
+    public function doctors(){
+        return $this->HasMany('Doctors');
+    }
+
+    public function beds(){
+        return $this->belongsTo('Beds');
     }
 }

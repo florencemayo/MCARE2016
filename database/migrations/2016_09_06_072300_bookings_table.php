@@ -14,7 +14,6 @@ class BookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->date('start_time');
             $table->date('end_time');
             $table->string('appointment_mode');
@@ -27,6 +26,7 @@ class BookingsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('clinic_id')->references('id')->on('clinics');
             $table->foreign('service_id')->references('id')->on('services');
+            $table->timestamps();
         });
     }
 

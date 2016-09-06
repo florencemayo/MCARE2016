@@ -3,23 +3,23 @@
  * Created by PhpStorm.
  * User: Naamini
  * Date: 8/31/2016
- * Time: 8:05 AM
+ * Time: 8:03 AM
  */
+
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Clinics extends Model{
-    protected $table = 'clinics';
+class Doctors extends Model{
+    protected $table = 'doctors';
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['clinic_name', 'floor_number', 'department_id'];
+    protected $fillable = ['user_id','expertise'];
 
     protected $hidden = ['id'];
 
-    public function patients()
-    {
+    public function patients(){
         return $this->HasMany('Patients');
     }
 }

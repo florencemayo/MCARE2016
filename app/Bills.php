@@ -15,11 +15,12 @@ class Bills extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['id', 'bill_title','patient_id','payee','amount_numeric','amount_text','bill_type','government_tax','timestamp()'];
+    protected $fillable = ['bill_title','patient_id','payee','amount_numeric','amount_text','bill_type','government_tax'];
 
     protected $hidden = ['id'];
 
-    public function patients(){
+    public function patients()
+    {
       return $this->belongsTo('Patients');
     }
 }

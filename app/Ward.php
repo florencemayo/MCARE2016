@@ -9,12 +9,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Clinics extends Model{
-    protected $table = 'clinics';
+class Ward extends Model{
+    protected $table = 'ward';
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['clinic_name', 'floor_number', 'department_id'];
+    protected $fillable = ['ward_name', 'clinic_id', 'department_id','number_of_beds'];
 
     protected $hidden = ['id'];
 
@@ -22,4 +22,10 @@ class Clinics extends Model{
     {
         return $this->HasMany('Patients');
     }
+
+    public function beds()
+    {
+        return $this->HasMany('Beds');
+    }
+
 }

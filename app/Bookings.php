@@ -16,7 +16,7 @@ class Bookings extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['id', 'start_time', 'end_time', 'appointment_mode', 'notes', 'patient_id', 'user_id', 'clinic_id', 'service_id'];
+    protected $fillable = ['start_time', 'end_time', 'appointment_mode', 'notes', 'patient_id', 'user_id', 'clinic_id', 'service_id'];
 
     protected $hidden = ['id'];
 
