@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Services;
+use App\Doctors;
 
-class ServicesController extends Controller
+class DoctorsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return Services::all();
+        return Doctors::all();
     }
 
     /**
@@ -38,13 +38,11 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $services = new Services;
-        $services->service_name = $request->service_name;
-        $services->price = $request->price;
-        $services->bill_id = $request->bill_id;
-        $services->save();
+        $doctors = new Doctors;
+        $doctors->expertise = $request->expertise;
+        $doctors->save();
 
-        return $services;
+        return $doctors;
     }
 
     /**
@@ -55,7 +53,7 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        return Services::find($id);
+        return Doctors::find($id);
     }
 
     /**
@@ -78,9 +76,9 @@ class ServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $services = Services::find($id);
+        $doctors = Doctors::find($id);
         //Updates
-        $services->save();
+        $doctors->save();
     }
 
     /**
@@ -91,8 +89,8 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-      $services = Services::find($id);
-      $services->delete();
-      $services->save();
+        $doctors = Doctors::find($id);
+        $doctors->delete();
+        $doctors->save();
     }
 }

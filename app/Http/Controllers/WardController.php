@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Services;
-
-class ServicesController extends Controller
+class WardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +15,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return Services::all();
+        return Ward::all();
     }
 
     /**
@@ -38,13 +36,14 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $services = new Services;
-        $services->service_name = $request->service_name;
-        $services->price = $request->price;
-        $services->bill_id = $request->bill_id;
-        $services->save();
+        $ward = new Ward;
+        $ward->ward_name = $request->name;
+        $ward->clinic_id = $request->clinic_id;
+        $ward->department_id = $request->department_id;
+        $ward->number_of_beds = $request->number_of_beds;
+        $ward->save();
 
-        return $services;
+        return $ward;
     }
 
     /**
@@ -55,7 +54,7 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        return Services::find($id);
+        return Ward::find($id);
     }
 
     /**
@@ -78,9 +77,9 @@ class ServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $services = Services::find($id);
+        $ward = Ward::find($id);
         //Updates
-        $services->save();
+        $ward->save();
     }
 
     /**
@@ -91,8 +90,8 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-      $services = Services::find($id);
-      $services->delete();
-      $services->save();
+        $ward = Ward::find($id);
+        $ward->delete();
+        $ward->save();
     }
 }
