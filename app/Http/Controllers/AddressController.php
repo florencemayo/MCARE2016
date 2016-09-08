@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Services;
+use App\Address;
 
-class ServicesController extends Controller
+class AddressController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return Services::all();
+        return Address::all();
     }
 
     /**
@@ -38,13 +38,14 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $services = new Services;
-        $services->service_name = $request->service_name;
-        $services->price = $request->price;
-        $services->bill_id = $request->bill_id;
-        $services->save();
+        $address = new Address;
+        $address->street_name = $request->street;
+        $address->district_name = $request->district;
+        $address->region_name = $request->region;
+        $address->country_name = $request->country;
+        $address->save();
 
-        return $services;
+        return $address;
     }
 
     /**
@@ -55,7 +56,7 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        return Services::find($id);
+        return Address::find($id);
     }
 
     /**
@@ -78,9 +79,9 @@ class ServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $services = Services::find($id);
+        $address = Address::find($id);
         //Updates
-        $services->save();
+        $address->save();
     }
 
     /**
@@ -91,8 +92,8 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-      $services = Services::find($id);
-      $services->delete();
-      $services->save();
+        $address = Address::find($id);
+        $address->delete();
+        $address->save();
     }
 }

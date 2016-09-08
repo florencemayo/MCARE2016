@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Services;
+use App\Beds;
 
-class ServicesController extends Controller
+class BedsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return Services::all();
+        return Beds::all();
     }
 
     /**
@@ -38,13 +38,17 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $services = new Services;
-        $services->service_name = $request->service_name;
-        $services->price = $request->price;
-        $services->bill_id = $request->bill_id;
-        $services->save();
+        $beds = new Beds;
+        $beds->bed_size = $request->size;
+        $beds->bed_type = $request->type;
+        $beds->bed_class = $request->class;
+        $beds->bed_charge = $request->charge;
+        $beds->ward_id = $request->ward_id;
+        $beds->clinic_id = $request->clinic_id;
+        $beds->department_id = $request->department_id;
+        $beds->save();
 
-        return $services;
+        return $beds;
     }
 
     /**
@@ -55,7 +59,7 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        return Services::find($id);
+        return Beds::find($id);
     }
 
     /**
@@ -78,9 +82,9 @@ class ServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $services = Services::find($id);
+        $beds = Beds::find($id);
         //Updates
-        $services->save();
+        $beds->save();
     }
 
     /**
@@ -91,8 +95,8 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-      $services = Services::find($id);
-      $services->delete();
-      $services->save();
+        $beds = Beds::find($id);
+        $beds->delete();
+        $beds->save();
     }
 }
