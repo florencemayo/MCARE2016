@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="description" content="Avenxo Admin Theme">
-    <meta name="author" content="KaijuThemes">
+    <meta name="description" content="MCARE 2016 Hosptal System">
+    <meta name="author" content="softmed">
 
     <link type='text/css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600' rel='stylesheet'>
 
@@ -416,7 +416,7 @@
 <li class="active"><a href="index.html">Dashboard</a></li>
 
                             </ol>
-                                  <div ng-view class="ng-scope"></div>
+                                  <div ng-view></div>
                         </div> <!-- #page-content -->
 
                     </div>
@@ -428,16 +428,7 @@
         <button class="pull-right btn btn-link btn-xs hidden-print" id="back-to-top"><i class="ti ti-arrow-up"></i></button>
     </div>
 </footer>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-44426473-4', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
                 </div>
             </div>
@@ -484,34 +475,12 @@
 
     <!-- Load page level scripts-->
 
-<!-- Charts -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.min.js') ?>"></script>
-<!-- Flot Main File -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.pie.min.js') ?>"></script>
-<!-- Flot Pie Chart Plugin -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.stack.min.js') ?>"></script>
-<!-- Flot Stacked Charts Plugin -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.orderBars.min.js') ?>"></script>
-<!-- Flot Ordered Bars Plugin-->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.resize.min.js') ?>"></script>
-<!-- Flot Responsive -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.tooltip.min.js') ?>"></script>
-<!-- Flot Tooltips -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/charts-flot/jquery.flot.spline.js') ?>"></script>
-<!-- Flot Curved Lines -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/sparklines/jquery.sparklines.min.js') ?>"></script>
-<!-- Sparkline -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js') ?>"></script>
-<!-- jVectorMap -->
-<script type="text/javascript" src="<?php echo asset('assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') ?>"></script>
-<!-- jVectorMap -->
 <script type="text/javascript" src="<?php echo asset('assets/plugins/switchery/switchery.js') ?>"></script> <!-- Switchery -->
 <script type="text/javascript" src="<?php echo asset('assets/plugins/easypiechart/jquery.easypiechart.js') ?>"></script>
 <script type="text/javascript" src="<?php echo asset('assets/plugins/fullcalendar/moment.min.js') ?>"></script>
 <!-- Moment.js Dependency -->
 <script type="text/javascript" src="<?php echo asset('assets/plugins/fullcalendar/fullcalendar.min.js') ?>"></script>   			<!-- Calendar Plugin -->
 
-<script type="text/javascript" src="<?php echo asset('assets/demo/demo-index.js') ?>"></script>
 
 <!-- Initialize scripts for this page-->
 <script type="text/javascript" src="<?php echo  asset('js/angular.js') ?>"></script>
@@ -535,6 +504,7 @@
 
 <!--controllers-->
 <script type="text/javascript" src="<?php echo  asset("controllers/mainController.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("controllers/registerUserController.js") ?>"></script>
 
 <script src="<?php echo  asset("libs/pagination/dirPagination.js") ?>"></script>
 
