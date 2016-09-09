@@ -98,3 +98,43 @@ Route::get('bookings/{id}', 'BookingsController@show');
 Route::post('bookings', 'BookingsController@store');
 Route::post('bookings/{id}', 'BookingsController@update');
 Route::post('bookings/delete/{id}', 'BookingsController@destroy');
+
+/**
+ * Bookings routes
+ *
+ */
+Route::get('beds', 'BedsController@index');
+Route::get('beds/{id}', 'BedsController@show');
+Route::post('beds', 'BedsController@store');
+Route::post('beds/{id}', 'BedsController@update');
+Route::post('beds/delete/{id}', 'BedsController@destroy');
+
+/**
+ * Address routes
+ *
+ */
+Route::get('address', 'AddressController@index');
+Route::get('address/{id}', 'AddressController@show');
+Route::post('address', 'AddressController@store');
+Route::post('address/{id}', 'AddressController@update');
+Route::post('address/delete/{id}', 'AddressController@destroy');
+
+/**
+ * Doctors routes
+ *
+ */
+Route::get('doctors', 'DoctorsController@index');
+Route::get('doctors/{id}', 'DoctorsController@show');
+Route::post('doctors', 'DoctorsController@store');
+Route::post('doctors/{id}', 'DoctorsController@update');
+Route::post('doctors/delete/{id}', 'DoctorsController@destroy');
+
+/**
+ * Ward routes
+ *
+ */
+Route::get('ward', 'WardController@index');
+Route::get('ward/{id}', 'WardController@show');
+Route::post('ward', 'WardController@store');
+Route::post('ward/{id}', 'WardController@update');
+Route::post('ward/delete/{id}', 'WardController@destroy');
