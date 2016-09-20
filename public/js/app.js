@@ -26,6 +26,9 @@ angular.module("mcare",[
         }).when("/patient",{
             templateUrl: 'views/patient.html',
             controller: 'mainController'
+        }).when("/findPatient",{
+            templateUrl: 'views/findPatient.html',
+            controller: 'patientController'
         });
 
         $routeProvider.otherwise({

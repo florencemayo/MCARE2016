@@ -289,10 +289,9 @@
         <nav role="navigation" class="widget-body">
 		<ul class="acc-menu">
 			<li class="nav-separator"><span>Explore</span></li>
-			<li><a href="index.html"><i class="ti ti-home"></i><span>Dashboard</span><span class="badge badge-teal">2</span></a></li>
-			<li><a href="angular/app/index.html"><i class="ti ti-shield"></i><span>AngularJS</span></span></a></li>
-      <li><a href="./#register"><i class="ti ti-shield"></i><span>Registration</span></span></a></li>
-      <li><a href="./#patient"><i class="ti ti-shield"></i><span>Patient</span></span></a></li>
+			<li><a href="./#findPatient"><i class="ti ti-search"></i><span>Find Patient</span></a></li>
+			<li><a href="./#register"><i class="ti ti-shield"></i><span>Registration</span></span></a></li>
+		    <li><a href="./#patient"><i class="ti ti-shield"></i><span>Patient</span></span></a></li>
 			<li><a href="javascript:;"><i class="ti ti-layout"></i><span>Layout</span></a>
 				<ul class="acc-menu">
 					<li><a href="layout-grids.html">Grid Scaffolding</a></li>
@@ -505,6 +504,7 @@
 <!--controllers-->
 <script type="text/javascript" src="<?php echo  asset("controllers/mainController.js") ?>"></script>
 <script type="text/javascript" src="<?php echo  asset("controllers/registerUserController.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("controllers/patientController.js") ?>"></script>
 
 <script src="<?php echo  asset("libs/pagination/dirPagination.js") ?>"></script>
 
