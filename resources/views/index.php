@@ -23,6 +23,7 @@
     <link type="text/css" href="<?php echo asset('assets/plugins/iCheck/skins/minimal/blue.css') ?>" rel="stylesheet">
     <!-- iCheck -->
 
+
     <!--[if lt IE 10]>
         <script type="text/javascript" src="assets/js/media.match.min.js"></script>
         <script type="text/javascript" src="assets/js/respond.min.js"></script>
@@ -51,15 +52,14 @@
 			</a>
 		</span>
 
-		<a class="navbar-brand" href="index.html">MCARE</a>
-
-		<div class="toolbar-icon-bg hidden-xs" id="toolbar-search">
+		<a class="navbar-brand" href="#">MCARE</a>
+		<!--div class="toolbar-icon-bg hidden-xs" id="toolbar-search">
             <div class="input-group">
             	<span class="input-group-btn"><button class="btn" type="button"><i class="ti ti-search"></i></button></span>
 				<input type="text" class="form-control" placeholder="Search...">
 				<span class="input-group-btn"><button class="btn" type="button"><i class="ti ti-close"></i></button></span>
 			</div>
-        </div>
+        </div-->
 
 	</div><!-- logo-area -->
 
@@ -272,7 +272,7 @@
                 <div class="static-sidebar-wrapper sidebar-default">
                     <div class="static-sidebar">
                         <div class="sidebar">
-	<div class="widget">
+	<!--div class="widget">
         <div class="widget-body">
             <div class="userinfo">
                 <div class="avatar">
@@ -284,7 +284,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div-->
 	<div class="widget stay-on-collapse" id="widget-sidebar">
         <nav role="navigation" class="widget-body">
 		<ul class="acc-menu">

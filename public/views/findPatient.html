@@ -7,14 +7,14 @@
 				<input type="text" class="form-control" ng-model="searchItem" placeholder="Search by ID or NAME">
 			</div>
 			<div class="col-sm-2">
-			<button ng-click="findPatient(searchItem)">Search</button>
+			<button class="btn-primary btn" ng-click="findPatient(searchItem)">Search</button>
 			</div>
 		</div>
 	</div>
 
-
+   <div ng-show="showAlert" class="alert alert-info"> {{patients.length}} patient(s) found </div>
    <div data-widget-group="group1">
-	    <div class="panel panel-midnightblue" data-widget='{"draggable": "false"}'>
+	    <div ng-show="patients.length > 0" class="panel panel-midnightblue" data-widget='{"draggable": "false"}'>
 			<div class="panel-heading">
 				<h2>Results of Search</h2>
 				<div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
@@ -24,12 +24,16 @@
 				<div class="col-sm-12">
 					    <table class="table table-striped table-bordered">
 							<thead>
-								<tr>
-									<th>Name</th>
+								<tr class="success">
+								    <th>ID</th>
+								    <th>User ID</th>
+									<th>Next of Kin</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr ng-repeat="patient in patients" class="odd gradeX">
+									<td>{{ patient.id }} </td>
+									<td>{{ patient.user_id }} </td>
 									<td>{{ patient.nextOfKin }} </td>
 								</tr>
 							</tbody>

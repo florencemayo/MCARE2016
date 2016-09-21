@@ -69,6 +69,12 @@ Route::post('patients', 'PatientsController@store');
 Route::post('patients/{id}', 'PatientsController@update');
 Route::post('patients/delete/{id}', 'PatientsController@destroy');
 
+Route::get('users', 'UsersController@index');
+Route::get('users/{id}', 'UsersController@show');
+Route::post('users', 'UsersController@store');
+Route::post('users/{id}', 'UsersController@update');
+Route::post('users/delete/{id}', 'UsersController@destroy');
+
 /**
  * Rooms routes
  *
