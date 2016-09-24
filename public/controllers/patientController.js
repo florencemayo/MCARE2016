@@ -13,12 +13,21 @@ var patientController = angular.module("patientController",[])
         getAllPatients();
         $scope.searchedValue = " ";
 
+        var capitalizeFirstLetter = function(value){
+            if(angular.isNumber(value) == false){
+                value =value.toLowerCase();
+                value = value.substring(0,1).toUpperCase()+value.substring(1);
+            }
+            return value;
+        }
+
         var existPatient = function(searchValue){
             $scope.patients = [];
+            searchValue = capitalizeFirstLetter(searchValue);
             for (var i=0; i<$scope.allPatients.length; i++){
-                if ($scope.allPatients[i].first_name === searchValue ||
-                    $scope.allPatients[i].last_name === searchValue ||
-                    $scope.allPatients[i].identification_code === searchValue){
+                if ($scope.allPatients[i].first_name == searchValue ||
+                    $scope.allPatients[i].last_name == searchValue ||
+                    $scope.allPatients[i].identification_code == searchValue){
                     $scope.patients.push($scope.allPatients[i]);
                  }
             }
