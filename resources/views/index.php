@@ -41,7 +41,7 @@
 
     <body class="animated-content">
 
-        <header id="topnav" class="navbar navbar-default navbar-fixed-top" role="banner">
+        <header id="topnav" class="navbar navbar-default navbar-fixed-top navbar-cyan" role="banner">
 
 	<div class="logo-area">
 		<span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg">
@@ -269,7 +269,7 @@
 
         <div id="wrapper">
             <div id="layout-static">
-                <div class="static-sidebar-wrapper sidebar-default">
+                <div class="static-sidebar-wrapper sidebar-cyan">
                     <div class="static-sidebar">
                         <div class="sidebar">
 	<!--div class="widget">
@@ -291,7 +291,7 @@
 			<li class="nav-separator"><span>Explore</span></li>
 			<li><a href="./#findPatient"><i class="ti ti-search"></i><span>Find Patient</span></a></li>
 			<li><a href="./#register"><i class="ti ti-shield"></i><span>Registration</span></span></a></li>
-		    <li><a href="./#patient"><i class="ti ti- ti-harddrives"></i><span>Data Management</span></span></a></li>
+		    <li><a href="./#dataManagement"><i class="ti ti- ti-harddrives"></i><span>Data Management</span></span></a></li>
 			<li class="nav-separator"><span>Extras</span></li>
 			<li><a href="app-inbox.html"><i class="ti ti-email"></i><span>Inbox</span><span class="badge badge-danger">3</span></a></li>
 			<li><a href="extras-calendar.html"><i class="ti ti-calendar	"></i><span>Calendar</span><span class="badge badge-orange">1</span></a></li>
