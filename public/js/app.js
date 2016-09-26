@@ -23,6 +23,9 @@ angular.module("mcare",[
         $routeProvider.when("/register",{
             templateUrl: 'views/registerPatient.html',
             controller: 'registerPatientController'
+        }).when("/home",{
+            templateUrl: 'views/home.html',
+            controller: 'patientCtrl'
         }).when("/patient",{
             templateUrl: 'views/patient.html',
             controller: 'mainController'
@@ -35,7 +38,7 @@ angular.module("mcare",[
         });
 
         $routeProvider.otherwise({
-            redirectTo: '/upload'
+            redirectTo: '/home'
         });
 
 
