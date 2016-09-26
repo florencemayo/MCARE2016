@@ -14,11 +14,9 @@ class Clinics extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['clinic_name', 'floor_number'];
+    protected $fillable = ['clinic_name', 'floor_number','department_id'];
 
     protected $hidden = ['id'];
-
-    protected $guarded = ['department_id'];
 
     public function patients()
     {
