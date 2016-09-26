@@ -398,7 +398,7 @@
 
 <!--controllers-->
 <script type="text/javascript" src="<?php echo  asset("controllers/mainController.js") ?>"></script>
-<script type="text/javascript" src="<?php echo  asset("controllers/registerUserController.js") ?>"></script>
+<script type="text/javascript" src="<?php echo  asset("controllers/registerPatientController.js") ?>"></script>
 <script type="text/javascript" src="<?php echo  asset("controllers/patientController.js") ?>"></script>
 
 <script src="<?php echo  asset("libs/pagination/dirPagination.js") ?>"></script>

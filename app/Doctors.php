@@ -15,9 +15,11 @@ class Doctors extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['user_id','expertise'];
+    protected $fillable = ['expertise'];
 
     protected $hidden = ['id'];
+
+    protected $guarded = ['user_id'];
 
     public function patients(){
         return $this->HasMany('Patients');

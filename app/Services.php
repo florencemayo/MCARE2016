@@ -16,10 +16,11 @@ class Services extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['service_name', 'price', 'bill_id'];
+    protected $fillable = ['service_name', 'price'];
 
     protected $hidden = ['id'];
 
+    protected $guarded = ['bill_id'];
 
     public function patient()
     {
