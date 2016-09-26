@@ -25,7 +25,7 @@ angular.module("mcare",[
             controller: 'registerPatientController'
         }).when("/home",{
             templateUrl: 'views/home.html',
-            controller: 'patientCtrl'
+            controller: 'patientController'
         }).when("/patient",{
             templateUrl: 'views/patient.html',
             controller: 'mainController'
