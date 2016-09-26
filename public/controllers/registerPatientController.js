@@ -1,5 +1,5 @@
 var registerPatientController = angular.module("registerPatientController",[])
-    .controller('registerPatientController', ['$scope', 'API_URL', function ($scope, API_URL) {
+    .controller('registerPatientController', ['$scope','$http','API_URL', function ($scope, API_URL) {
         console.log("Patient Registration!!!!");
 
         $scope.firstname;
@@ -17,7 +17,8 @@ var registerPatientController = angular.module("registerPatientController",[])
         $scope.password;
 
         $scope.register = function(patient){
-          var url = API_URL+"patients";
+          var url = API_URL+"patients"; 
+
           $http.post(url, {
             first_name:$scope.firstname,
             middle_name:$scope.middlename,
