@@ -23,20 +23,25 @@ var patientController = angular.module("patientController",[])
 
         var existPatient = function(searchValue){
             $scope.patients = [];
+            if (checkValue(searchValue) == false) {
             searchValue = capitalizeFirstLetter(searchValue);
             for (var i=0; i<$scope.allPatients.length; i++){
-                if ($scope.allPatients[i].first_name == searchValue ||
-                    $scope.allPatients[i].last_name == searchValue ||
-                    $scope.allPatients[i].identification_code == searchValue){
-                    $scope.patients.push($scope.allPatients[i]);
-                 }
+                    if ($scope.allPatients[i].first_name == searchValue ||
+                        $scope.allPatients[i].last_name == searchValue ||
+                        $scope.allPatients[i].identification_code == searchValue){
+                        $scope.patients.push($scope.allPatients[i]);
+                     }
+                }
+            }else{
+                $scope.patients=[];
             }
         }
         
-        /*var checkValue = function(val){
+        var checkValue = function(val){
             return angular.isUndefined(val) || val===null;
-        };*/
-
+        };
+       
+        console.log("Mobile types"+ $scope.mobileNumber);
         $scope.searchPatient = function(value){
              $scope.showAlert = true;
              existPatient(value);
@@ -60,4 +65,24 @@ var patientController = angular.module("patientController",[])
                 }
             });
         }*/
+        
+        //$scope.showIdentificationField = false;
+        //$scope.showMobileNumberField = false;
+
+        $scope.enableFields = function(patientAttributes){
+            if (patientAttributes == 'identificationCode') {
+                $scope.showIdentificationField = true;
+                $scope.showMobileNumberField = false; 
+           }else if (patientAttributes == 'mobileNumber'){
+                $scope.showMobileNumberField = true;
+                $scope.showIdentificationField = false;
+           }else{
+            $scope.showIdentificationField = false;
+            $scope.showMobileNumberField = false;
+           }
+        }
+
+        $scope.checkDuplicates =  function(){
+
+        };
 }]);
