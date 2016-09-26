@@ -5,4 +5,4 @@
 /* Controllers
 * Put all the controllers you will use here
 */
-var mcareControllers = angular.module('mcareControllers', ['mainController', 'registerUserController','patientController']);
+var mcareControllers = angular.module('mcareControllers', ['mainController', 'registerPatientController','patientController']);
