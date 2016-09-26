@@ -21,8 +21,8 @@ angular.module("mcare",[
     })
     .config( function($routeProvider){
         $routeProvider.when("/register",{
-            templateUrl: 'views/registerUser.html',
-            controller: 'registerUserController'
+            templateUrl: 'views/registerPatient.html',
+            controller: 'registerPatientController'
         }).when("/patient",{
             templateUrl: 'views/patient.html',
             controller: 'mainController'
@@ -41,4 +41,5 @@ angular.module("mcare",[
 
 
     })
-    .constant('API_URL', 'http://localhost:8080/');
+    //.constant('API_URL', 'http://localhost:8080/');
+    .constant('API_URL', 'http://104.200.18.173/');
