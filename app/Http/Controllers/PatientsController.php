@@ -39,7 +39,19 @@ class PatientsController extends Controller
     public function store(Request $request)
     {
         $patients = new Patients;
-        //Complicated!!!!
+        $patients->first_name = $request->first_name;
+        $patients->middle_name = $request->middle_name;
+        $patients->last_name = $request->last_name;
+        $patients->gender = $request->gender;
+        $patients->birthdate = $request->date_of_birth;
+        $patients->mobile_number = $request->mobile_number;
+        $patients->nextOfKin = $request->nextOfKin;
+        $patients->street_name = $request->street;
+        $patients->district_name = $request->district;
+        $patients->region_name = $request->region;
+        $patients->country_name = $request->country;
+        $patients->email_address = $request->email;
+        $patients->password = $request->passwd;
         $patients->save();
 
         return $patients;

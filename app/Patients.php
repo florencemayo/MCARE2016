@@ -15,7 +15,7 @@ class Patients extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['user_id','next_of_kin'];
+    protected $fillable = ['first_name','middle_name','last_name','gender','birthdate','mobile_number','nextOfKin','street_name','district_name','region_name','country_name','email_address','password'];
 
     protected $hidden = ['id'];
 
