@@ -14,9 +14,11 @@ class Beds extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['bed_size', 'bed_type', 'bed_class','bed_charge','ward_id','clinic_id','department_id'];
+    protected $fillable = ['bed_size', 'bed_type', 'bed_class','bed_charge'];
 
     protected $hidden = ['id'];
+
+    protected $guarded = ['ward_id','clinic_id','department_id'];
 
     public function patients()
     {

@@ -14,9 +14,11 @@ class Newborns extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['identification_code', 'date_birth', 'doctor_id','patient_id'];
+    protected $fillable = ['identification_code', 'date_birth'];
 
     protected $hidden = ['id'];
+
+    protected $guarded = ['doctor_id','patient_id'];
 
     public function patients()
     {
