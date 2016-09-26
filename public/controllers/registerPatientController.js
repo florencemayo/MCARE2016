@@ -1,5 +1,4 @@
-
-var registerUserModule = angular.module("registerPatientController",[])
+var registerPatientController = angular.module("registerPatientController",[])
     .controller('registerPatientController', ['$scope', function ($scope) {
         console.log("Patient Registration!!!!");
 
