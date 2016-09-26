@@ -34,7 +34,7 @@ angular.module("mcare",[
             controller: 'patientController'
         }).when("/dataManagement",{
             templateUrl: 'views/dataManagement.html',
-            controller: 'patientController'
+            controller: 'dataManagementCtrl'
         });
 
         $routeProvider.otherwise({
@@ -44,5 +44,5 @@ angular.module("mcare",[
 
 
     })
-    //.constant('API_URL', 'http://localhost:8080/');
-    .constant('API_URL', 'http://104.200.18.173/');
+    .constant('API_URL', 'http://localhost:8080/');
+    //.constant('API_URL', 'http://104.200.18.173/');
