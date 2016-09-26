@@ -15,11 +15,9 @@ class Bills extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['bill_title','payee','amount_numeric','amount_text','bill_type','government_tax'];
+    protected $fillable = ['bill_title','patient_id','payee','amount_numeric','amount_text','bill_type','government_tax'];
 
     protected $hidden = ['id'];
-
-    protected $guarded = ['patient_id'];
 
     public function patients()
     {

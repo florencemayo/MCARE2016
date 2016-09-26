@@ -14,11 +14,9 @@ class Ward extends Model{
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['ward_name', 'number_of_beds'];
+    protected $fillable = ['ward_name', 'number_of_beds','clinic_id', 'department_id'];
 
     protected $hidden = ['id'];
-
-    protected $guarded = ['clinic_id', 'department_id'];
 
     public function patients()
     {

@@ -20,7 +20,6 @@ class Rooms extends Model
 
     protected $hidden = ['id'];
 
-
     public function patients()
     {
         return $this->belongsTo('Patients');
