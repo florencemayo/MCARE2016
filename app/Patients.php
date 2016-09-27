@@ -17,7 +17,7 @@ class Patients extends Model{
 
     protected $fillable = ['first_name','middle_name','last_name','gender','birthdate','mobile_number','nextOfKin','street_name','district_name','region_name','country_name','email_address','password'];
 
-    protected $hidden = ['id'];
+    //protected $hidden = ['id'];
 
     public function newborns(){
         return $this->HasMany('Newborns');

@@ -6,7 +6,7 @@ var patientController = angular.module("patientController",[])
 
         $scope.allPatients = []; 
         var getAllPatients = function(){
-            $http.get(API_URL+"patients").success(function (data){
+            $http.get(API_URL+ "patients").success(function (data){
                     $scope.allPatients = data;
             });
         };
@@ -41,7 +41,6 @@ var patientController = angular.module("patientController",[])
             return angular.isUndefined(val) || val===null;
         };
        
-        console.log("Mobile types"+ $scope.mobileNumber);
         $scope.searchPatient = function(value){
              $scope.showAlert = true;
              existPatient(value);
@@ -68,21 +67,4 @@ var patientController = angular.module("patientController",[])
         
         //$scope.showIdentificationField = false;
         //$scope.showMobileNumberField = false;
-
-        $scope.enableFields = function(patientAttributes){
-            if (patientAttributes == 'identificationCode') {
-                $scope.showIdentificationField = true;
-                $scope.showMobileNumberField = false; 
-           }else if (patientAttributes == 'mobileNumber'){
-                $scope.showMobileNumberField = true;
-                $scope.showIdentificationField = false;
-           }else{
-            $scope.showIdentificationField = false;
-            $scope.showMobileNumberField = false;
-           }
-        }
-
-        $scope.checkDuplicates =  function(){
-
-        };
 }]);
